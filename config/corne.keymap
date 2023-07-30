@@ -10,8 +10,8 @@
 #define X_LB    &kp LSHFT
 #define X_RB    &kp RSHFT
 
-#define X_LH    &smart_mouse
-#define X_RH    &bs_del
+#define X_LH    SMART_NUM
+#define X_RH    &smart_mouse
 
 /* source the main keymap */
 #include "base.keymap"
