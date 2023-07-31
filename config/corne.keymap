@@ -11,7 +11,7 @@
 #define X_RB    &kp GRAVE
 
 #define X_LH    &lt SYM SQT 
-#define X_RH    &kp AT
+#define X_RH    SMART_NUM
 
 /* source the main keymap */
 #include "base.keymap"
