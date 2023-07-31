@@ -158,6 +158,14 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
     keep-mods = <MOD_RSFT>;
 )
 
+#define FN_DEL &lt_bs_del FN 0
+ZMK_BEHAVIOR(lt_bs_del, hold_tap
+    falvor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&bs_del>;
+)
+
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
 #define DSK_PREV    &hmr RSHFT LG(LC(LEFT))  // previous desktop
@@ -176,7 +184,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH        X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               &smart_shft   &lt FN bs_del   X_MH     &lt_spc NAV 0 &lt SYM RET                                               X_RH
+    X_LH                                               &smart_shft   FN_DEL          X_MH     &lt_spc NAV 0 &lt SYM RET                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
