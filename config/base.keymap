@@ -159,7 +159,7 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
 )
 
 #define FN_DEL &lt_bs_del FN 0
-ZMK_BEHAVIOR(lt_bs_del, hold_tap
+ZMK_BEHAVIOR(lt_bs_del, hold_tap,
     falvor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
@@ -184,7 +184,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH        X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               &smart_shft   FN_DEL          X_MH     &lt_spc NAV 0 &lt SYM RET                                               X_RH
+    X_LH                                               FN_DEL        &smart_shft     X_MH     &lt SYM RET   &lt_spc NAV 0                                             X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
