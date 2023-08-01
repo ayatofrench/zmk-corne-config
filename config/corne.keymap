@@ -2,16 +2,16 @@
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
 #define X_LT    &kp TAB
-#define X_RT    &kp HASH
+#define X_RT    &kp SQT
 
 #define X_LM    &kp ESC
 #define X_RM    &kp MINUS
 
-#define X_LB    &kp PIPE
-#define X_RB    &kp GRAVE
+#define X_LB    &kp EXCL
+#define X_RB    &grave_pipe
 
-#define X_LH    &lt SYM SQT 
-#define X_RH    SMART_NUM
+#define X_LH    SMART_NUM 
+#define X_RH    &kp HASH 
 
 /* source the main keymap */
 #include "base.keymap"

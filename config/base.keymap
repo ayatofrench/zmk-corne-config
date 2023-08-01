@@ -151,6 +151,11 @@ ZMK_BEHAVIOR(dot_spc, macro,
     bindings = <&kp DOT &kp SPACE &sk LSHFT>;
 )
 
+ZMK_BEHAVIOR(grave_pipe, mod_morph,
+    bindings = <&kp GRAVE>, <&kp PIPE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>; 
+)
+
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
 ZMK_BEHAVIOR(bs_del, mod_morph,
     bindings = <&kp BSPC>, <&kp DEL>;
@@ -158,7 +163,7 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
     keep-mods = <MOD_RSFT>;
 )
 
-#define FN_DEL &lt_bs_del FN 0
+#define SYM_DEL &lt_bs_del SYM 0
 ZMK_BEHAVIOR(lt_bs_del, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -174,7 +179,7 @@ ZMK_BEHAVIOR(lt_bs_del, hold_tap,
 
 /* Keymap */
 
-ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
+ZMK_CONDITIONAL_LAYER(SYM NAV, SYS)  // FN + NUM --> SYS
 
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
@@ -184,7 +189,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH        X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               FN_DEL        &smart_shft     X_MH     &lt SYM RET   &lt_spc NAV 0                                             X_RH
+    X_LH                                               &smart_shft   SYM_DEL         X_MH     &lt_spc NAV 0 &lt FN RET                                                X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
@@ -227,7 +232,7 @@ ZMK_LAYER(num,
 //
 ZMK_LAYER(sym,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp AT        ___           ___           ___           ___             X_MT     ___           ___           ___           &kp BSLH      &kp EXCL        X_RT
+    X_LT     &kp AT        ___           ___           ___           ___             X_MT     ___           ___           ___           ___           &kp BSLH        X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp PLUS      &kp LBKT      &kp LBRC      &kp LPAR      &kp AMPS        X_MM     &kp EQUAL     &kp RPAR      &kp RBRC      &kp RBKT      &kp STAR        X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
