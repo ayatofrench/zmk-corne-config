@@ -11,7 +11,7 @@
 #define X_RB    &grave_pipe
 
 #define X_LH    SMART_NUM 
-#define X_RH    &kp HASH 
+#define X_RH    &tilde_hash 
 
 /* source the main keymap */
 #include "base.keymap"
