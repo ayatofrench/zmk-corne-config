@@ -112,7 +112,7 @@ ZMK_BEHAVIOR(smart_num, hold_tap,
 )
 ZMK_BEHAVIOR(num_dance, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
+    bindings = <&sl NUM>, <&num_word>;  // reverse this for sticky-num on single tap
 )
 &num_word {  // num-word, requires PR #1451
     layers = <NUM>;
@@ -183,11 +183,7 @@ ZMK_BEHAVIOR(lt_bs_del, hold_tap,
 
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-#define DSK_PREV    &hmr RSHFT LG(LC(LEFT))  // previous desktop
-#define DSK_NEXT    &hmr LALT LG(LC(RIGHT))  // next     desktop
 #define VOL_DOWN    &hmr LCTRL C_VOL_DN
-
-/* Keymap */
 
 ZMK_CONDITIONAL_LAYER(SYM NAV, SYS)  // FN + NUM --> SYS
 
