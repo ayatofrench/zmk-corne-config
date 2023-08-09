@@ -10,7 +10,7 @@
 #define X_LB    &excl_prcnt
 #define X_RB    &grave_pipe
 
-#define X_LH    SMART_NUM 
+#define X_LH    &mo FN 
 #define X_RH    &tilde_hash 
 
 /* source the main keymap */
