@@ -19,6 +19,7 @@
 #define SYS 5
 #define MOUSE 6
 
+#include "combos.dtsi"
 #include "extra_keys.h"
 
 #define XXX &none
