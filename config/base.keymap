@@ -171,6 +171,26 @@ ZMK_BEHAVIOR(tilde_hash, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>; 
 )
 
+ZMK_BEHAVIOR(sqt_minus, mod_morph,
+    bindings = <&kp SQT>, <&kp MINUS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>; 
+)
+
+ZMK_BEHAVIOR(comma_qmark, mod_morph,
+    bindings = <&kp COMMA>, <&kp QMARK>;
+    mods = <(MOD_LSFT|MOD_RSFT)>; 
+)
+
+ZMK_BEHAVIOR(under_dqt, mod_morph,
+    bindings = <&kp UNDER>, <&kp DQT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>; 
+)
+
+ZMK_BEHAVIOR(fslh_lt, mod_morph,
+    bindings = <&kp FSLH>, <&kp LT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>; 
+)
+
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
 ZMK_BEHAVIOR(bs_del, mod_morph,
     bindings = <&kp BSPC>, <&kp DEL>;
@@ -191,8 +211,20 @@ ZMK_BEHAVIOR(lt_bs_del, hold_tap,
 #define VOL_DOWN    &hmr LCTRL C_VOL_DN
 
 ZMK_CONDITIONAL_LAYER(SYM NAV, SYS)  // FN + NUM --> SYS
-
+                                     //
 ZMK_LAYER(base,
+//╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+    X_LT     &kp B         &kp L         &kp D         &kp W         &kp Z           X_MT     &sqt_minus    &kp F         &kp O         &kp U         &kp J           X_RT
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LM     &hml LALT N   &hml LGUI R   &hml LCTRL T  &hml LSHFT S  &kp G           X_MM     &kp Y         &hmr RSHFT H  &hmr LCTRL A  &hmr LGUI E   &hmr LALT I     X_RM
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LB     &kp Q         &kp X         &kp M         &kp C         &kp V           X_MB     &kp K         &kp P         &kp DOT       &under_dqt    &fslh_lt        X_RB
+//├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
+    X_LH                                               &smart_shft   SYM_DEL         X_MH     &lt_spc NAV 0 &lt NUM RET                                               X_RH
+//╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
+)
+
+ZMK_LAYER(qwerty,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp Q         &kp W         &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp P           X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤

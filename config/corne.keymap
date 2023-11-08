@@ -2,7 +2,7 @@
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
 #define X_LT    &kp TAB
-#define X_RT    &kp SQT
+#define X_RT    &kp SEMI
 
 #define X_LM    &kp ESC
 #define X_RM    &kp MINUS
