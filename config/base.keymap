@@ -17,7 +17,7 @@
 #define NUM 3
 #define SYM 4
 #define SYS 5
-#define QWERTY 6
+#define GRAPHITE 6
 
 #include "combos.dtsi"
 #include "extra_keys.h"
@@ -214,11 +214,11 @@ ZMK_CONDITIONAL_LAYER(SYM NAV, SYS)  // FN + NUM --> SYS
                                      //
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp B         &kp L         &kp D         &kp W         &kp Z           X_MT     &sqt_minus    &kp F         &kp O         &kp U         &kp J           X_RT
+    X_LT     &kp Q         &kp W         &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp P           X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LALT N   &hml LGUI R   &hml LCTRL T  &hml LSHFT S  &kp G           X_MM     &kp Y         &hmr RSHFT H  &hmr LCTRL A  &hmr LGUI E   &hmr LALT I     X_RM
+    X_LM     &hml LALT A   &hml LGUI S   &hml LCTRL D  &hml LSHFT F  &kp G           X_MM     &kp H         &hmr RSHFT J  &hmr LCTRL K  &hmr LGUI L   &hmr LALT SEMI  X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Q         &kp X         &kp M         &kp C         &kp V           X_MB     &kp K         &kp P         &kp DOT       &under_dqt    &fslh_lt        X_RB
+    X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH        X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               &smart_shft   SYM_DEL         X_MH     &lt_spc NAV 0 &lt NUM RET                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
@@ -285,13 +285,13 @@ ZMK_LAYER(sys,
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
-ZMK_LAYER(qwerty,
+ZMK_LAYER(graphite,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp Q         &kp W         &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp P           X_RT
+    X_LT     &kp B         &kp L         &kp D         &kp W         &kp Z           X_MT     &sqt_minus    &kp F         &kp O         &kp U         &kp J           X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LALT A   &hml LGUI S   &hml LCTRL D  &hml LSHFT F  &kp G           X_MM     &kp H         &hmr RSHFT J  &hmr LCTRL K  &hmr LGUI L   &hmr LALT SEMI  X_RM
+    X_LM     &hml LALT N   &hml LGUI R   &hml LCTRL T  &hml LSHFT S  &kp G           X_MM     &kp Y         &hmr RSHFT H  &hmr LCTRL A  &hmr LGUI E   &hmr LALT I     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH        X_RB
+    X_LB     &kp Q         &kp X         &kp M         &kp C         &kp V           X_MB     &kp K         &kp P         &kp DOT       &under_dqt    &fslh_lt        X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               &smart_shft   SYM_DEL         X_MH     &lt_spc NAV 0 &lt NUM RET                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
