@@ -5,7 +5,7 @@
 #define X_RT    &kp SEMI
 
 #define X_LM    &kp ESC
-#define X_RM    &kp MINUS
+#define X_RM    &comma_qmark 
 
 #define X_LB    &excl_prcnt
 #define X_RB    &grave_pipe
